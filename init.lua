@@ -203,7 +203,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -214,7 +214,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -301,6 +301,23 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+
+-- [[ My Keymaps ]]
+local silent = {silent = true}
+
+-- Normal --
+-- Better window navigation
+vim.keymap.set("n", "<C-h>", "<C-w>h", silent)
+vim.keymap.set("n", "<C-j>", "<C-w>j", silent)
+vim.keymap.set("n", "<C-k>", "<C-w>k", silent)
+vim.keymap.set("n", "<C-l>", "<C-w>l", silent)
+
+-- -- Navigate buffers
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", silent)
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", silent)
+
+-- Save
+vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>", silent)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
