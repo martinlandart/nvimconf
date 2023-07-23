@@ -298,7 +298,7 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
@@ -326,7 +326,7 @@ vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>", silent)
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", silent)
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", silent)
 
-vim.keymap.set("n", "<leader>c", "<CMD>bd!<CR>", silent)
+-- vim.keymap.set("n", "<leader>c", "<CMD>bd!<CR>", silent)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -452,9 +452,10 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
+  golangci_lint_ls = {},
+  gopls = {},
   -- pyright = {},
-  -- rust_analyzer = {},
+  rust_analyzer = {},
   -- tsserver = {},
 
   lua_ls = {
