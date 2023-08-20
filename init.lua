@@ -337,7 +337,12 @@ vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>", silent)
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", silent)
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", silent)
 
--- vim.keymap.set("n", "<leader>c", "<CMD>bd!<CR>", silent)
+vim.keymap.set("n", "<leader>tt", ":lua require('neotest').output.open({enter=true})<CR>", silent)
+vim.keymap.set("n", "<leader>ta", ":lua require('neotest').run.run({suite=true})<CR>", silent)
+vim.keymap.set("n", "<leader>tn", ":lua require('neotest').run.run()<CR>", silent)
+vim.keymap.set("n", "<leader>tf", ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", silent)
+vim.keymap.set("n", "<leader>ts", ":lua require('neotest').summary.toggle()<CR>", silent)
+vim.keymap.set("n", "<leader>to", ":lua require('neotest').output_panel.toggle()<CR>", silent)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
