@@ -218,6 +218,17 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.relativenumber = true
+vim.opt.number = true
+vim.opt.numberwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.cursorline = true
+
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+vim.opt.ignorecase = true
+vim.opt.swapfile = false
+vim.opt.expandtab = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

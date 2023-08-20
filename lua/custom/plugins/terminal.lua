@@ -38,6 +38,6 @@ return {
 	opts = {
 		shell = get_shell(),
 		open_mapping = [[<c-t>]],
-		-- direction = 'float',
+		direction = 'float',
 	}
 }
