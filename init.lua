@@ -470,7 +470,7 @@ local servers = {
   -- pyright = {},
   rust_analyzer = {},
   -- tsserver = {},
-
+  fsharp_language_server = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
